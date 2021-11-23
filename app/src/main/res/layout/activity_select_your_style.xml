@@ -18,13 +18,13 @@
             style="@style/title_text"
             android:layout_marginStart="17dp"
             android:layout_marginTop="54dp"
-            android:text="@string/title_main"
+            android:text="@string/brew_with_lex"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             style="@style/sub_title_text"
-            android:text="@string/sub_title_select_your_style"
+            android:text="@string/select_your_style"
             app:layout_constraintStart_toStartOf="@id/title"
             app:layout_constraintTop_toBottomOf="@id/title" />
 

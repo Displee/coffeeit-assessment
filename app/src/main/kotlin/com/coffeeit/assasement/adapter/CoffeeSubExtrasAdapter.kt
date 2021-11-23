@@ -1,7 +1,6 @@
 package com.coffeeit.assasement.adapter
 
 import android.content.Context
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.coffeeit.assasement.R
 import com.coffeeit.assasement.model.CoffeeExtra
 
-class CoffeeSubExtrasAdapter(var dataSet: Array<CoffeeExtra>, private val intentExtras: Bundle?) :
+class CoffeeSubExtrasAdapter(var dataSet: Array<CoffeeExtra>, private val togglable: Boolean) :
     RecyclerView.Adapter<CoffeeSubExtrasAdapter.ViewHolder>() {
 
     private lateinit var context: Context
@@ -37,11 +36,14 @@ class CoffeeSubExtrasAdapter(var dataSet: Array<CoffeeExtra>, private val intent
             viewHolder.imageView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.circle_empty))
         }
         viewHolder.textView.text = coffeeExtra.name
+        if (!togglable) {
+            return
+        }
         viewHolder.itemView.setOnClickListener {
-            for(i in dataSet) {
+            coffeeExtra.selected = !coffeeExtra.selected
+            for(i in dataSet.filterNot { it == coffeeExtra }) {
                 i.selected = false
             }
-            coffeeExtra.selected = true
             notifyDataSetChanged()
         }
     }

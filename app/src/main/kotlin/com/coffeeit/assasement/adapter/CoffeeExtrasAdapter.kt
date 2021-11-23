@@ -1,7 +1,6 @@
 package com.coffeeit.assasement.adapter
 
 import android.content.Context
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -58,7 +57,7 @@ class CoffeeExtrasAdapter(var dataSet: Array<CoffeeExtra>) :
 
         // Child recycler view
         val layoutManager = LinearLayoutManager(viewHolder.subExtras.context)
-        val childItemAdapter = CoffeeSubExtrasAdapter(coffeeExtra.subSelections, null)
+        val childItemAdapter = CoffeeSubExtrasAdapter(coffeeExtra.subSelections, true)
         viewHolder.subExtras.layoutManager = layoutManager
         viewHolder.subExtras.adapter = childItemAdapter
         viewHolder.subExtras.setRecycledViewPool(viewPool)

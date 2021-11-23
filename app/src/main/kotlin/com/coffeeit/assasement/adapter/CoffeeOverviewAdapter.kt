@@ -66,7 +66,7 @@ class CoffeeOverviewAdapter(var dataSet: Array<CoffeeExtra>) :
             return
         }
         val layoutManager = LinearLayoutManager(viewHolder.subExtras.context)
-        val childItemAdapter = CoffeeSubExtrasAdapter(subSelections, null)
+        val childItemAdapter = CoffeeSubExtrasAdapter(subSelections, false)
         viewHolder.subExtras.layoutManager = layoutManager
         viewHolder.subExtras.adapter = childItemAdapter
         viewHolder.subExtras.setRecycledViewPool(viewPool)

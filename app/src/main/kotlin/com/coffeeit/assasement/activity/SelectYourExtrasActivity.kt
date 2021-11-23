@@ -17,14 +17,14 @@ import kotlinx.serialization.json.Json
 class SelectYourExtrasActivity : AppCompatActivity() {
 
     private lateinit var coffeeExtrasAdapter: CoffeeExtrasAdapter
-    private lateinit var coffeeSizeViewModel: CoffeeExtrasViewModel
+    private lateinit var coffeeExtrasViewModel: CoffeeExtrasViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_your_extras)
 
-        coffeeSizeViewModel = ViewModelProvider(this)[CoffeeExtrasViewModel::class.java]
-        coffeeSizeViewModel.coffeeExtras().observe(this) {
+        coffeeExtrasViewModel = ViewModelProvider(this)[CoffeeExtrasViewModel::class.java]
+        coffeeExtrasViewModel.coffeeExtras().observe(this) {
             coffeeExtrasAdapter.dataSet = it
             coffeeExtrasAdapter.notifyDataSetChanged()
         }
@@ -36,13 +36,13 @@ class SelectYourExtrasActivity : AppCompatActivity() {
     private fun initCoffeeExtras() {
         val recyclerView = findViewById<RecyclerView>(R.id.coffee_extras)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        coffeeExtrasAdapter = CoffeeExtrasAdapter(coffeeSizeViewModel.coffeeExtras().value ?: emptyArray())
+        coffeeExtrasAdapter = CoffeeExtrasAdapter(coffeeExtrasViewModel.coffeeExtras().value ?: emptyArray())
         recyclerView.adapter = coffeeExtrasAdapter
     }
 
     private fun setContinueListener() {
         val button = findViewById<ConstraintLayout>(R.id.continue_extras)
-        button.setOnClickListener {
+        button?.setOnClickListener {
             val intent = Intent(this, CoffeeOverviewActivity::class.java).apply {
                 val intentExtras = intent.extras
                 if (intentExtras != null) {

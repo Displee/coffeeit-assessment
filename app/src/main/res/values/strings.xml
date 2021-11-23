@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Assasement</string>
-    <string name="title_start">Dark roasted beans</string>
-    <string name="title_main">Brew with Lex</string>
-    <string name="sub_title_start">Tab the machine to start</string>
-    <string name="sub_title_select_your_style">Select your style</string>
+    <string name="dark_roasted_beans">Dark roasted beans</string>
+    <string name="brew_with_lex">Brew with Lex</string>
+    <string name="tap_the_machine_to_start">Tap the machine to start</string>
+    <string name="select_your_style">Select your style</string>
     <string name="select_your_size">Select your size</string>
     <string name="select_your_extras">Select your extra\'s</string>
     <string name="overview">Overview</string>

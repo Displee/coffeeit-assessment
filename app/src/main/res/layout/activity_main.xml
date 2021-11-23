@@ -18,13 +18,13 @@
             style="@style/title_text"
             android:layout_marginStart="17dp"
             android:layout_marginTop="54dp"
-            android:text="@string/title_start"
+            android:text="@string/dark_roasted_beans"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             style="@style/sub_title_text"
-            android:text="@string/sub_title_start"
+            android:text="@string/tap_the_machine_to_start"
             app:layout_constraintStart_toStartOf="@id/title"
             app:layout_constraintTop_toBottomOf="@id/title" />
 

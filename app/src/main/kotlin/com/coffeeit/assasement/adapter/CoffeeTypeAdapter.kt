@@ -12,7 +12,6 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.coffeeit.assasement.R
 import com.coffeeit.assasement.activity.SelectYourSizeActivity
-import com.coffeeit.assasement.activity.SelectYourStyleActivity
 import com.coffeeit.assasement.model.CoffeeType
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
