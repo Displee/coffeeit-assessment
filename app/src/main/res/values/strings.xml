@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Assasement</string>
+    <string name="title_start">Dark roasted beans</string>
+    <string name="title_main">Brew with Lex</string>
+    <string name="sub_title_start">Tab the machine to start</string>
+    <string name="sub_title_select_your_style">Select your style</string>
+    <string name="select_your_size">Select your size</string>
+    <string name="select_your_extras">Select your extra\'s</string>
+    <string name="overview">Overview</string>
+    <string name="how_to_scan"><u>How does this work?</u></string>
+    <string name="lungo">Lungo</string>
+    <string name="cappuccino">Cappuccino</string>
+    <string name="americano">Americano</string>
+    <string name="espresso">Espresso</string>
+    <string name="ristretto">Ristretto</string>
+    <string name="latte_macchiato">Latte Macchiato</string>
+    <string name="continue_">Continue</string>
+    <string name="brew_your_coffee">Brew your coffee</string>
+</resources>
